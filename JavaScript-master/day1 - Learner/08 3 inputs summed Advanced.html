@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> Interest Calculator</title>
+</head>
+<body>
+<h1>Sum</h1>
+<h2>Add three variables with a function</h2>
+<input id="input1" type=”number”/> +
+<input id="input2" type=”number”/> +
+<input id="input3" type=”number”/>
+
+<input type="button" id="answer2" value="Answer" />
+<div id="result1"></div><br>
+<div id="result2"></div><br>
+<div id="result3"></div><br>
+
+
+<script>
+	var event1 = document.getElementById("answer2")
+	event1.addEventListener("click", displayInput, false);
+
+	function displayInput() {
+		var userInput1 = document.getElementById("input1").value;
+		var userInput2 = document.getElementById("input2").value;
+		var userInput3 = document.getElementById("input3").value;
+
+		var calculation1 = (+userInput1 + +userInput2) * +userInput3;
+		//console.log(calculation1);
+		var calculation2 = +userInput1 + +userInput2 + +userInput3;
+		var finalCalculation = calculation1 - calculation2;
+
+		document.getElementById("result1").innerHTML = "the sum of your first two numbers multiplied by your third number is "+ calculation1;
+		document.getElementById("result2").innerHTML = "The sum of your numbers is "+ calculation2;
+		document.getElementById("result3").innerHTML = "The difference between the results is "+ finalCalculation;
+	}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+		<head></head>
+		<body>
+			<h1>Guessing Game</h1>
+			<h2>Pick a number between 1 &amp; 100 (1 &amp; 100 included)</h2>
+			<form>
+				<input type="number" id="userInput"/>
+			</form>
+			<div><button id="button1">Button</button></div>
+			<div id="guessResult"></div>
+		</body>
+
+
+		<script>
+			var submitGuess = document.getElementById("button1")
+			submitGuess.addEventListener("click", compareNumbers, false);
+
+			function compareNumbers() {
+				var userGuess = document.getElementById("userInput").value;
+
+				if (userGuess == gloriousRNG) {
+					document.getElementById("guessResult").innerHTML = "WINNAR!"
+				} else if (userGuess > gloriousRNG) {
+					document.getElementById("guessResult").innerHTML = "Too high! Try again"
+				} else if (userGuess < gloriousRNG) {
+					document.getElementById("guessResult").innerHTML = "Too low! Try again"
+				}
+			}
+
+			var gloriousRNG = Math.floor(Math.random() * 100) +1;
+			console.log(gloriousRNG);
+
+//gloriousRNG
+
+
+
+
+		</script>
+	</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Please enter 2 numbers below</p>
+<form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+</form>
+<div><button id="button1">Compare !</button></div>
+<div id="demo"></div>
+
+
+<script>
+	var event1 = document.getElementById("button1")
+
+	event1.addEventListener("click", displayInput, false);
+
+	function displayInput() {
+		var userInput1 = document.getElementById("input1").value;
+		var userInput2 = document.getElementById("input2").value;
+
+		//this checks what the element type is.
+		console.log(typeof(input1));
+
+		// 1.= is THIS is equal to THAT. 2.== is is THIS equal to that? JAVASCRIPT TREATS VALUES BETWEEN STRINGS AND INTEGERS AS SAME E.G. "5" & 5 ARE THE SAME. 3.=== is comparison that also demands they be the same type E.G BOTH INTEGERS OR BOTH STRINGS
+		if (userInput1 === userInput2) {
+		document.getElementById("demo").innerHTML = "These numbers are the same!";
+	}	else {
+		document.getElementById("demo").innerHTML = "These numbers are different...";
+	}
+}
+
+
+</script>
+
+</body>
+</html>
