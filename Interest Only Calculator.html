@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html>
+		<head></head>
+		<body>
+			<h1>Interest Only Calculator</h1>
+			<h2>Amount of money to borrow</h2>
+			<form>
+				<input type="number" id="input1"/>
+			</form>
+
+			<h2>Interest rate</h2>
+			<form>
+				<input type="number" id="input2"/>
+			</form>
+
+
+			<h2>Length of time of loan (in months)</h2>
+			<form>
+				<input type="number" id="input3"/>
+			</form>
+			<div><button id="button1">Begin Calculation</button></div>
+			<div id="result"></div>
+		</body>
+
+		<script>
+			var activate document.getElementById("button1")
+			activate.addEventListener("click", calculateResult, false);
+
+			function calculateResult () {
+				var borrowedMoney = parseInt(document.getElementById("input1").value);
+				var interestRate = parseInt(document.getElementById("input2").value);
+				var loanDuration = parseInt(document.getElementById("input3").value);
+
+				var willPay = borrowedMoney * (interestRate/(100+loanDuration));
+
+				document.getElementById("result").innerHTML = willPay;
+			}
+
+
+
+		</script>
+	</html>

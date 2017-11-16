@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+
+<script>
+
+	var today = new Date();
+	var level = today.getDay();
+	var currentTime = today.toLocaleTimeString();
+
+	switch (level) {
+
+		case 0:
+			document.getElementById("demo").innerHTML = "The current day is Sunday and the time is " + currentTime;
+			break;
+
+		case 1:
+			document.getElementById("demo").innerHTML = "The current day is Monday and the time is " + currentTime;
+			break;
+
+		case 2:
+			document.getElementById("demo").innerHTML = "The current day is Tuesday and the time is " + currentTime;
+			break;
+
+		case 3:
+			document.getElementById("demo").innerHTML = "The current day is Wednesday and the time is " + currentTime;
+			break;
+
+		case 4:
+			document.getElementById("demo").innerHTML = "The current day is Thursday and the time is " + currentTime;
+			break;
+
+		case 5:
+			document.getElementById("demo").innerHTML = "The current day is Friday and the time is " + currentTime;
+			break;
+
+		case 6:
+			document.getElementById("demo").innerHTML = "The current day is Saturday and the time is " + currentTime;
+			break;
+
+		default:
+			document.getElementById("demo").innerHTML = "YOU BROKE THE CODE! <(x_X)>";
+			break;
+	}
+
+</script>
+
+</body>
+</html>

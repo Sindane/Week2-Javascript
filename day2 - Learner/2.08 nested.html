@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript nested loop</title>
+
+</head>
+<body>
+<h1>Javascript labs</h1>
+<h2>Nested loop</h2>
+<input id="result" type="button" value="Display 1 to 10"/>
+<div id="theoutput1"></div>
+<div id="theoutput2"></div>
+<div id="theoutput3"></div>
+
+<script>
+	var event1 = document.getElementById("result")
+	event1.addEventListener("click", displayInput, false);
+
+	function displayInput() {
+		var i = 0
+		var j = 0
+
+		while (i < 10) {
+			if (i == 5) {break}
+			if (j == 10) {continue}
+			i++
+			document.getElementById("theoutput1").innerHTML += i + "&nbsp";
+		} while (j < 10) {
+			j++
+			document.getElementById("theoutput2").innerHTML += j + "&nbsp";
+		} while (i < 10 && j == 10) {
+			i++
+			document.getElementById("theoutput3").innerHTML += i + "&nbsp";
+		}
+	}
+
+</script>
+
+</body>
+</html>
